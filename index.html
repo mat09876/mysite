@@ -1,28 +1,125 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+          <meta charset="utf-8">
+
+          <title>Wheelz4U</title>
+
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <link rel="stylesheet" href="style.css">
+
+
+
         
-        <head>
-            
+            <script>
+            function send() {
+                var x = document.getElementsByClassName("belowSM");
+                if (confirm("Are you happy for us to process your order?") == true) {
+                    x [0].innerHTML = "<div class='thank-you'>Thank You for your order we are processing it now</div>";
+                } else {
+                    x [0].innerHTML = "<div class='resend'>woops lets reload and try again</div>";
+                }
+                document.getElementsByClassName("belowSM").innerHTML = x;
+            }
 
-        </head>
+            function submit() {
+                alert("Thanks for your feedback");
+            }
 
-                        <body>
+            </script>
 
-                       
-                                <script>
-                                var xmlhttp = new XMLHttpRequest();
-                                var url = "cars.json";
+     </head>
 
-                                xmlhttp.onreadystatechange=function() {
-                                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                                        myFunction(xmlhttp.responseText);
-                                    }
-                                }
-                                xmlhttp.open("GET", url, true);
-                                xmlhttp.send();
+
+        <body>
+            <div id="wrapper">
+                    
+                    <header>
+                    <img src="colorblocks-logo.png"/>
+                    <h1>Wheelz4U</h1>
+                    </header>
+                    
+                        <nav>
+                            <ul>
+                                <li class='active'><a href="home.html">Home</a></li>
+                                <li><a href="contactUS.html">About Us</a></li>
+                                <li><a href="promotion.html">Promotion</a></li>
+                                <li><a href="delivery.html">Delivery Map</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </nav>
+                        
+                        <aside class="sidebar">
+                        <div id="social">
+                        <tr>
+                                <td><a href="https://www.facebook.com/pages/Wheelz4u/2042555099216132?skip_nax_wizard=true" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/facebook.png" alt="facebook"/></a></td>
+                                <td><a href="https://twitter.com/wheelz4uireland" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/twitter.png" alt="twitter"/></a></td>
+                                <td><a href="https://plus.google.com/u/0/107533036390254208842/posts" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/google_plus.png" alt="google plus"/></a></td>
+                            </tr>
+                        </div>
+                        </aside>
+                        
+                            <section class="belowSM">
+                            <h3>Write your shopping list below</h3>
+                                <textarea placeholder="1.Tesco = bananas, apples, pears" ></textarea>
+                                    <button onclick="window.location.href='home.html'" class="belowSM">Reset</button>
+                                    <button  onclick="send()" class="belowSM">Send</button>
 
                                 
-                                </script>
+                            </section>  
 
-                        </body>
-</html>
+                            <aside class="feedback_home">
+                                <h3>Feedback</h3>
+                                <div class="form_home">
+                                <form id="contact-form" method="post">
+
+                                    <ul>
+                                    <label for="name">Name</label> <input type="text" name="name" id="name"/>
+                                    <label for="email">Email</label> <input type="text" name="email" id="email"/>
+                                    <label for="feedback">Feedback</label> <input type="text" name="feedback"/>
+        
+                                    </ul>
+
+
+
+                                    <ul>
+                                     
+                                      <label for="location">Which employee served you ?</label>
+                                      <select name="location" id="location">
+                                        <option value="">Names</option>
+                                        <option value="Mathew">Mathew</option>
+                                        <option value="Andrew">Andrew</option>
+                                        <option value="John">John</option>
+                                        <option value="Callum">Callum</option>
+                                        <option value="Sam">Sam</option>
+                                    </ul>
+
+                                    <li><input onclick="submit()" type="submit" value="Submit"/></li>
+
+                                    </form>
+                                </div>
+                            </aside>
+                            <aside class="gif">
+                                <h3>We want happy customers</h3>
+                                <div class="dancing">
+                                <div class="man"></div>
+                                </div>
+                                <form>
+                            
+                            </form>
+                            </aside>
+                            
+                    <div class="clearfix"></div>
+                    <div id="footer">
+                        <h2>Contact Us</h2>
+                        <p>Call Us: 0871837485</p> <p>Email address: wheelz4uireland&#64;gmail.com</p> <p>&#169;2015 Wheels4U</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                    
+            </body> 
+</html>             
+                    
