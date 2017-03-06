@@ -9,20 +9,24 @@
                         <body>
 
                        
-                                <script>
-                                var xmlhttp = new XMLHttpRequest();
-                                var url = "cars.json";
-
-                                xmlhttp.onreadystatechange=function() {
-                                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                                        myFunction(xmlhttp.responseText);
-                                    }
-                                }
-                                xmlhttp.open("GET", url, true);
-                                xmlhttp.send();
-
-                                
-                                </script>
-
+                             <h1>Countdown Clock</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
                         </body>
 </html>
